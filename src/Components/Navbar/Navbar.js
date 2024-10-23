@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+
 import "./Navbar.css";
 
 
@@ -10,7 +11,7 @@ const Navbar = () => {
 
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [username, setUsername] = useState("");
-    const[email,setEmail]=useState("");
+    const [email,setEmail]=useState("");
     const [showDropdown, setShowDropdown] = useState(false);
     const handleClick = () => setClick(!click);
 
@@ -68,6 +69,9 @@ const Navbar = () => {
                 </li>
                 <li className="link">
                  <Link to="/reviews">Reviews</Link>
+                </li>
+                <li className="link">
+                    <Link to="/InstantConsultation">Instant Consultation</Link>
                 </li>
                 {isLoggedIn?(
                   <>
