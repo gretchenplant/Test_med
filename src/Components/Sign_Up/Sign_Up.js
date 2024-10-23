@@ -84,7 +84,7 @@ const Sign_Up = () => {
         </div>
         <div classname="form-group">
           <label htmlfor="phone">Phone</label>
-          <input value={phone} onChange={(e) => setPhone(e.target.value)} type="tel" name="phone" id="phone" className="form-control" placeholder="Enter your phone number" aria-describedby="helpId" />
+          <input value={phone} onChange={(e) => setPhone(e.target.value)} type="tel" name="phone" id="phone" required="" className="form-control" placeholder="Enter your phone number" aria-describedby="helpId" />
         </div>
         <div className="form-group">
           <label htmlFor="email">Email</label>
