@@ -50,21 +50,77 @@ const Sign_Up = () => {
     };
     // JSX to render the Sign Up form
     return (
-        <div className="container" style={{marginTop:'5%'}}>
-            <div className="signup-grid">
-                <div className="signup-form">
-                    <form method="POST" onSubmit={register}>
-                        <div className="form-group">
-                            <label htmlFor="email">Email</label>
-                            <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" name="email" id="email" className="form-control" placeholder="Enter your email" aria-describedby="helpId" />
-                            {showerr && <div className="err" style={{ color: 'red' }}>{showerr}</div>}
-                        </div>
-                        {/* Apply similar logic for other form elements like name, phone, and password to capture user information */}
-                    </form>
-                </div>
-            </div>
+        <div className="container" style={{ marginTop: "5%" }}>
+  <div className="signup-grid">
+    <div className="signup-text">
+      <h1>Sign Up</h1>
+    </div>
+    <div className="signup-text1" style={{ textAlign: "center" }}>
+      Already a member?{" "}
+      <span>
+        <a href="./Login" style={{ color: "#127369" }}>
+          {" "}
+          Login
+        </a>
+      </span>
+    </div>
+    <div className="signup-form">
+      <form>
+        <div className="form-group">
+          <label htmlFor="name">Role</label>
+          <input
+            type="text"
+            name="role"
+            id="name"
+            required=""
+            className="form-control"
+            placeholder="Enter your role"
+            aria-describedby="helpId"
+          />
         </div>
-        /* Note: Sign up role is not stored in the database. Additional logic can be implemented for this based on your React code. */
+        <div classname="form-group">
+          <label htmlfor="name">Name</label>
+          <input value={name} type="text" onChange={(e) => setName(e.target.value)} name="name" id="name" className="form-control" placeholder="Enter your name" aria-describedby="helpId" />
+        </div>
+        <div classname="form-group">
+          <label htmlfor="phone">Phone</label>
+          <input value={phone} onChange={(e) => setPhone(e.target.value)} type="tel" name="phone" id="phone" className="form-control" placeholder="Enter your phone number" aria-describedby="helpId" />
+        </div>
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required=""
+            className="form-control"
+            placeholder="Enter your email"
+            aria-describedby="helpId"
+          />
+        </div>
+        <div classname="form-group">
+          <label htmlfor="password">Password</label>
+          <input value={password} onChange={(e) => setPassword(e.target.value)} name="password" id="password" className="form-control" placeholder="Enter your password" aria-describedby="helpId" />
+       </div>
+          <div className="btn-group">
+            <button
+              type="submit"
+              className="btn btn-primary mb-2 mr-1 waves-effect waves-light"
+            >
+              Submit
+            </button>
+            <button
+              type="reset"
+              className="btn btn-danger mb-2 waves-effect waves-light"
+            >
+              Reset
+            </button>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+        
     );
-}
+};
 export default Sign_Up; // Export the Sign_Up component for use in other components

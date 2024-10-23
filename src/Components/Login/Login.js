@@ -1,6 +1,7 @@
 // Following code has been commented with appropriate comments for your reference.
 import React, { useState, useEffect } from 'react';
 // Apply CSS according to your design theme or the CSS provided in week 2 lab 2
+import './Login.css'
 import { Link, useNavigate } from 'react-router-dom';
 import { API_URL } from '../../config';
 const Login = () => {
@@ -59,9 +60,10 @@ const Login = () => {
           <div className="login-text">
             Are you a new member? 
             <span>
-              <Link to="/signup" style={{ color: '#2190FF' }}>
-                Sign Up Here
-              </Link>
+            <a href="./Sign_Up" style={{ color: "#127369" }}>
+          {" "}
+          Sign Up
+        </a>
             </span>
           </div>
           <br />
@@ -82,13 +84,36 @@ const Login = () => {
                 />
               </div>
               {/* Input field for password */}
-              // write logic code for password input box
-              <div className="btn-group">
+              <>
+  <div className="form-group">
+    <label htmlFor="password">Password</label>
+    <input
+      name="password"
+      id="password"
+      required=""
+      className="form-control"
+      placeholder="Enter your password"
+      aria-describedby="helpId"
+    />
+  </div>
+  <div className="btn-group">
                 {/* Login button */}
                 <button type="submit" className="btn btn-primary mb-2 mr-1 waves-effect waves-light">
                   Login
                 </button>
               </div>
+  <div className="btn-group">
+    <button
+      type="reset"
+      className="btn btn-danger mb-2 waves-effect waves-light"
+    >
+      Reset
+    </button>
+  </div>
+</>
+
+
+              
             </form>
           </div>
         </div>
