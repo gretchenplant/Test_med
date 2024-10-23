@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Import custom Navbar component
 import Navbar from './Components/Navbar/Navbar.js';
 // Import Instant Consultation component
-import Navbar from './Components/InstantConsultationBooking/InstantConsultation.js';
+import InstantConsultation from './Components/InstantConsultationBooking/InstantConsultation.js';
 // Import Landing Page
 import Landing_Page from './Components/Landing_Page/Landing_Page';
 // Import SIgn UP page
@@ -28,6 +28,7 @@ function App() {
             <Route path="/" element={<Landing_Page/>}/>
             <Route path="/Login" element={<Login/>}/>
             <Route path="/Sign_Up" element={<Sign_Up/>}/>
+            <Route path="/instant-consultation" element={<InstantConsultation />} />
           </Routes>
         </BrowserRouter>
     </div>
