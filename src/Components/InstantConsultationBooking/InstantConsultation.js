@@ -15,7 +15,7 @@ const InstantConsultation = () => {
         .then(res => res.json())
         .then(data => {
             if (searchParams.get('speciality')) {
-                // window.reload()
+                 window.reload()
                 const filtered = data.filter(doctor => doctor.speciality.toLowerCase() === searchParams.get('speciality').toLowerCase());
 
                 setFilteredDoctors(filtered);
@@ -30,6 +30,7 @@ const InstantConsultation = () => {
         })
         .catch(err => console.log(err));
     }
+    
     const handleSearch = (searchText) => {
 
         if (searchText === '') {
@@ -52,11 +53,11 @@ const InstantConsultation = () => {
     const navigate = useNavigate();
     useEffect(() => {
         getDoctorsDetails();
-        // const authtoken = sessionStorage.getItem("auth-token");
-        // if (!authtoken) {
-        //     navigate("/login");
-        // }
-    }, [searchParams])
+         const authtoken = sessionStorage.getItem("auth-token");
+         if (!authtoken) {
+             navigate("/login");
+         }
+    }, [searchParams, getDoctorsDetails, navigate])
 
     return (
         <center>
