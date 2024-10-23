@@ -4,6 +4,8 @@ import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Import custom Navbar component
 import Navbar from './Components/Navbar/Navbar.js';
+// Import Landing Page
+import Landing_page from './components/Landing_Page/Landing_page';
 // Function component for the main App
 function App() {
   // Render the main App component
@@ -13,6 +15,7 @@ function App() {
         <BrowserRouter>
           {/* Display the Navbar component */}
           <Navbar/>
+          <Landing_page/>
           {/* Set up the Routes for different pages */}
           <Routes>
             {/* Define individual Route components for different pages */}
