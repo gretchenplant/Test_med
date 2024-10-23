@@ -4,6 +4,8 @@ import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Import custom Navbar component
 import Navbar from './Components/Navbar/Navbar.js';
+// Import Instant Consultation component
+import Navbar from './Components/InstantConsultationBooking/InstantConsultation.js';
 // Import Landing Page
 import Landing_Page from './Components/Landing_Page/Landing_Page';
 // Import SIgn UP page
