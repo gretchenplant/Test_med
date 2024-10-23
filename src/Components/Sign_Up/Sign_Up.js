@@ -37,7 +37,8 @@ const Sign_Up = () => {
             sessionStorage.setItem("email", email);
             // Redirect user to home page
             navigate("/");
-            window.location.reload(); // Refresh the page
+             // Refresh the page
+             window.location.reload();
         } else {
             if (json.errors) {
                 for (const error of json.errors) {
@@ -65,7 +66,7 @@ const Sign_Up = () => {
       </span>
     </div>
     <div className="signup-form">
-      <form>
+      <form method="POST" onSubmit={register}>
         <div className="form-group">
           <label htmlFor="name">Role</label>
           <input
@@ -88,15 +89,7 @@ const Sign_Up = () => {
         </div>
         <div className="form-group">
           <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            required=""
-            className="form-control"
-            placeholder="Enter your email"
-            aria-describedby="helpId"
-          />
+          <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" name="email" id="email" required="" className="form-control" placeholder="Enter your email address" aria-describedby="helpId" />
         </div>
         <div classname="form-group">
           <label htmlfor="password">Password</label>
