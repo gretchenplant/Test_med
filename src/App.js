@@ -5,7 +5,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Import custom Navbar component
 import Navbar from './Components/Navbar/Navbar.js';
 // Import Landing Page
-import Landing_page from './components/Landing_Page/Landing_page';
+import Landing_page from './Components/Landing_Page/Landing_Page';
+// Import SIgn UP page
+import Sign_Up from './Components/Sign_Up/Sign_Up';
+// Import Login page
+import Login from './Components/Login/Login';
 // Function component for the main App
 function App() {
   // Render the main App component
@@ -16,6 +20,8 @@ function App() {
           {/* Display the Navbar component */}
           <Navbar/>
           <Landing_page/>
+          <Sign_Up/>
+          <Login/>
           {/* Set up the Routes for different pages */}
           <Routes>
             {/* Define individual Route components for different pages */}
