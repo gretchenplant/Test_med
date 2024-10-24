@@ -36,5 +36,20 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "description": "StayHealthy Inc. is a non-profit organization dedicated to improving healthcare facilities in remote areas with minimal to no medical facilities or resources. The Executive Director has started the Go digital initiative as part of StayHealthy's broader vision to maximize reach. One aspect of the initiative is building a website to help patients access doctors anytime, anywhere.",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.25.9",
+    "@babel/preset-env": "^7.25.9",
+    "@babel/preset-react": "^7.25.9",
+    "babel-loader": "^9.2.1",
+    "html-webpack-plugin": "^5.6.3",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
   }
 }

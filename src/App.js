@@ -12,6 +12,14 @@ import Landing_Page from './Components/Landing_Page/Landing_Page';
 import Sign_Up from './Components/Sign_Up/Sign_Up';
 // Import Login page
 import Login from './Components/Login/Login';
+// Import Find Doctor page
+import FindDoctorSearch from './Components/FindDoctorSearch/FindDoctorSearch';
+// Import Find DoctorIC page
+import FindDoctorSearchIC from './Components/InstantConsultationBooking/FindDoctorSearchIC/FindDoctorSearchIC';
+// Import Find DoctorCard page
+import DoctorCardIC from './Components/InstantConsultationBooking/DoctorCardIC/DoctorCardIC';
+// Import Find DoctorCard page
+import AppointmentformIC from './Components/InstantConsultationBooking/AppointmentFormIC/AppointmentFormIC';
 
 
 
@@ -31,7 +39,11 @@ function App() {
             <Route path="/" element={<Landing_Page/>}/>
             <Route path="/Login" element={<Login/>}/>
             <Route path="/Sign_Up" element={<Sign_Up/>}/>
-            <Route path="/InstantConsultation" element={<InstantConsultation/>} />
+            <Route path="/InstantConsultation" element={<InstantConsultation/>}/>
+            <Route path="/FindDoctorSearch" element={<FindDoctorSearch/>}/>
+            <Route path="/FindDoctorSearchIC" element={<FindDoctorSearchIC/>}/>
+            <Route path="/DoctorCardIC" element={<DoctorCardIC/>}/>
+            <Route path="/AppointmentFormIC" element={<AppointmentformIC/>}/>
           </Routes>
         </BrowserRouter>
     </div>
