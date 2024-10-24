@@ -80,6 +80,7 @@
     margin-bottom: 20px;
 }
 
+
 .btn {
     padding: 10px 20px;
     font-size: 16px;
@@ -88,10 +89,12 @@
     cursor: pointer;
 }
 
+
 .btn-primary {
     background-color: #127369;
     color: #fff;
 }
+
 
 .btn-danger {
     background-color: #dc3545;

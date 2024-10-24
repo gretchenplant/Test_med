@@ -31,5 +31,6 @@ const Landing_Page = () => {
       </div>
     </section>
   );
+  
 };
 export default Landing_Page; // Exporting the Landing_Page component to be used in other parts of the application

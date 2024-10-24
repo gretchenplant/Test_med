@@ -16,6 +16,7 @@ const Login = () => {
       navigate("/");
     }
   }, []);
+  
   // Function to handle login form submission
   const login = async (e) => {
     e.preventDefault();
@@ -30,6 +31,7 @@ const Login = () => {
         password: password,
       }),
     });
+
     // Parse the response JSON
     const json = await res.json();
     if (json.authtoken) {
