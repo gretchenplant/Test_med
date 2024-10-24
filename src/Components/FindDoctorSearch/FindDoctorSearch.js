@@ -43,7 +43,7 @@ const FindDoctorSearch = () => {
                 </div>
             </center>
         </div>
-    )
-}
+    );
+};
 
 export default FindDoctorSearch;
