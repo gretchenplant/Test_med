@@ -59,6 +59,7 @@ function App() {
             <Route path="/search/doctors" element={<Appointmentform/>}/>
             <Route path="/reviews" element={<ReviewForm/>}/>
             <Route path="/feedback-form" element={<FeedbackForm/>}/>
+            <Route path="/profile-update" element={<ProfileUpdate/>}/>
           </Routes>
         </BrowserRouter>
         

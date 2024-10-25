@@ -24,21 +24,7 @@ nav {
     cursor: pointer;
 }
 
-/* Display hover dropdown menu */
-.welcome-user:hover .dropdown-menu {
-    display: block;
-}
 
-/* List items in the dropdown menu */
-.dropdown-menu li {
-    display: block;
-}
-
-/* Links in the dropdown menu */
-.dropdown-menu li a {
-    color: #333;
-    transition: color 0.3 ease;
-}
 
 /* Navbar Logo */
 .nav_logo {
@@ -150,4 +136,38 @@ nav {
 .navBtn2:hover {
     background-color:#3685fb; 
     color:white; 
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content div {
+  color: black;
+  
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content div:hover {
+  background-color: #f1f1f1;
 }

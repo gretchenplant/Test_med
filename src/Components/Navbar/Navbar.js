@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
-
+import { useNavigate } from 'react-router-dom';
 import "./Navbar.css";
-
 
 
 const Navbar = () => {
@@ -39,6 +37,16 @@ const Navbar = () => {
     const handleDropdown = () => {
       setShowDropdown(!showDropdown);
     }
+    const useName = () => {
+        sessionStorage.getItem("name");
+    }
+    // Function to handle feedback button click
+  const navigate = useNavigate();
+
+  const profileEdit = () => {
+
+    navigate('/profile-update'); // Navigate to FeedbackForm component
+  };
     useEffect(() => { 
       const storedemail = sessionStorage.getItem("email");
 
@@ -75,6 +83,17 @@ const Navbar = () => {
                 </li>
                 {isLoggedIn?(
                   <>
+                    <li className="link">
+                        <button className="dropdown-button" onClick={handleDropdown}>
+                        Welcome, {useName} $
+                        </button>
+                        {showDropdown && (
+                            <div className="dropdown-content">
+                                <button onClick={} href="#option1">Profile</button>
+                                <div href="#option2">Reports</div>
+                            </div>
+                        )}
+                    </li>
                     <li className="link">
                       <button className="btn2" onClick={handleLogout}>
                         Logout
