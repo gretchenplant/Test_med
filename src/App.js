@@ -26,6 +26,8 @@ import DoctorCard from './Components/DoctorCard/DoctorCard';
 import DoctorList from './Components/DoctorCard/DoctorsList';
 // Import Appointment Form page
 import Appointmentform from './Components/AppointmentForm/AppointmentForm.js';
+// Import Reviews page
+import ReviewForm from './Components/ReviewForm/ReviewForm.js';
 
 
 
@@ -52,6 +54,7 @@ function App() {
             <Route path="/AppointmentFormIC" element={<AppointmentformIC/>}/>
             <Route path="/DoctorCard" element={<DoctorCard/>}/>
             <Route path="/search/doctors" element={<Appointmentform/>}/>
+            <Route path="/reviews" element={<ReviewForm/>}/>
         
           </Routes>
         </BrowserRouter>
