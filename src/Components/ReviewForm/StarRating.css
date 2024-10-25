@@ -1,0 +1,19 @@
+.star-rating {
+  display: flex;
+  cursor: pointer;
+}
+
+.star {
+  font-size: 30px; /* Size of the star */
+  color: lightgray; /* Default color for unfilled stars */
+  margin-right: 5px; /* Space between stars */
+  transition: color 0.2s;
+}
+
+.star.filled {
+  color: gold; /* Color for filled stars */
+}
+
+.p {
+    justify-content: center;
+}

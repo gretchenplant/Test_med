@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './ReviewForm.css';
 
 const ReviewForm = () => {
   // Sample data for appointments
@@ -43,7 +44,7 @@ const ReviewForm = () => {
                   Click Here
                 </button>
               </td>
-              <td>{appointment.reviewGiven || ''}</td>
+              <td>{''}</td>
             </tr>
           ))}
         </tbody>
