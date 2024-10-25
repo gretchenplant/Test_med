@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './ReviewForm.css';
+import { useHistory } from 'react-router-dom';
 
 const ReviewForm = () => {
   // Sample data for appointments
@@ -10,15 +11,12 @@ const ReviewForm = () => {
   ]);
 
   // Function to handle feedback button click
-  const handleFeedbackClick = (id) => {
-    setAppointments((prevAppointments) =>
-      prevAppointments.map((appointment) =>
-        appointment.id === id
-          ? { ...appointment, reviewGiven: 'Feedback Submitted' }
-          : appointment
-      )
-    );
+  const history = useHistory();
+
+  const handleFeedbackClick = () => {
+    history.push('/appointment'); // Navigate to AppointmentForm component
   };
+
 
   return (
     <div>
@@ -40,7 +38,7 @@ const ReviewForm = () => {
               <td>{appointment.doctorName}</td>
               <td>{appointment.specialty}</td>
               <td>
-                <button onClick={() => handleFeedbackClick(appointment.id)}>
+                <button onClick={handleButtonClick}>
                   Click Here
                 </button>
               </td>

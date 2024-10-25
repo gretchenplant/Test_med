@@ -19,7 +19,7 @@ const StarRating = () => {
           ★
         </span>
       ))}
-      <p>Rating: {rating} {rating === 1 ? 'star' : 'stars'}</p>
+      <p className="starLabel" >Rating: {rating} {rating === 1 ? 'star' : 'stars'}</p>
     </div>
   );
 };

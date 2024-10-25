@@ -33,6 +33,7 @@ import FeedbackForm from './Components/ReviewForm/FeedbackForm.js';
 
 
 
+
 // Function component for the main App
 function App() {
   // Render the main App component
@@ -58,6 +59,7 @@ function App() {
             <Route path="/search/doctors" element={<Appointmentform/>}/>
             <Route path="/reviews" element={<ReviewForm/>}/>
             <Route path="/feedback-form" element={<FeedbackForm/>}/>
+            
         
           </Routes>
         </BrowserRouter>
