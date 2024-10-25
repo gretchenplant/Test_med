@@ -14,9 +14,9 @@ const ReviewForm = () => {
   const navigate = useNavigate();
 
   const handleFeedbackClick = () => {
+
     navigate('/feedback-form'); // Navigate to FeedbackForm component
   };
-
 
   return (
     <div>
@@ -38,11 +38,11 @@ const ReviewForm = () => {
               <td>{appointment.doctorName}</td>
               <td>{appointment.specialty}</td>
               <td>
-                <button className='btnColor' onClick={handleFeedbackClick}>
+                <button className='btnColor' onClick={handleFeedbackClick} >
                   Click Here
                 </button>
               </td>
-              <td>{''}</td>
+              <td>{appointment.reviewGiven || ''}</td>
             </tr>
           ))}
         </tbody>
