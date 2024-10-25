@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './ReviewForm.css';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const ReviewForm = () => {
   // Sample data for appointments
@@ -11,10 +11,10 @@ const ReviewForm = () => {
   ]);
 
   // Function to handle feedback button click
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleFeedbackClick = () => {
-    history.push('/appointment'); // Navigate to AppointmentForm component
+    navigate('/feedback-form'); // Navigate to FeedbackForm component
   };
 
 
@@ -38,7 +38,7 @@ const ReviewForm = () => {
               <td>{appointment.doctorName}</td>
               <td>{appointment.specialty}</td>
               <td>
-                <button onClick={handleButtonClick}>
+                <button className='btnColor' onClick={handleFeedbackClick}>
                   Click Here
                 </button>
               </td>

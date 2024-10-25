@@ -1,7 +1,7 @@
 // Import necessary modules from React library
 import React, { useEffect } from 'react';
 // Import components for routing from react-router-dom library
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 // Import custom Navbar component
 import Navbar from './Components/Navbar/Navbar.js';
 // Import Instant Consultation component
@@ -59,8 +59,6 @@ function App() {
             <Route path="/search/doctors" element={<Appointmentform/>}/>
             <Route path="/reviews" element={<ReviewForm/>}/>
             <Route path="/feedback-form" element={<FeedbackForm/>}/>
-            
-        
           </Routes>
         </BrowserRouter>
         

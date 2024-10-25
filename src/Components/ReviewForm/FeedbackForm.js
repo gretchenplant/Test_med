@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "./FeedbackForm.css";
 import StarRating from './StarRating';
+import { useNavigate } from 'react-router-dom';
 
 
 // Function component for giving reviews
@@ -14,6 +15,13 @@ function GiveReviews() {
     review: '',
     rating: 0
   });
+
+  const navigate = useNavigate();
+
+  const handleSubmitClick = () => {
+    navigate('/reviews'); // Navigate to FeedbackForm component
+  };
+
   // Function to handle button click event
   const handleButtonClick = () => {
     setShowForm(true);
@@ -44,7 +52,7 @@ function GiveReviews() {
       
       {!showForm ? (
         // Display button to open the form
-        <button onClick={handleButtonClick}>Open Form</button>
+        <button className='btnColor' onClick={handleButtonClick}>Open Form</button>
       ) : (
         // Display form for giving feedback
         <form onSubmit={handleSubmit}>
@@ -60,19 +68,15 @@ function GiveReviews() {
             <textarea id="review" name="review" placeholder="Enter your feedback here" value={formData.review} onChange={handleChange} />
           </div>
           <div>
-      <h1>Rate Your Experience</h1>
+      <h2>Rate Your Experience</h2>
       <StarRating />
     </div>
-          <button type="submit">Submit</button>
+          <button onClick={handleSubmitClick} className='btnColor' type="submit">Submit</button>
         </form>
       )}
-      {/* Display the submitted message if available */}
-      {submittedMessage && (
-        <div>
-          <h3>Submitted Message:</h3>
-          <p>{submittedMessage}</p>
-        </div>
-      )}
+      
+      
+      
     </div>
   );
 }
