@@ -39,10 +39,10 @@ const ReviewForm = () => {
               <td>{appointment.specialty}</td>
               <td>
                 <button className='btnColor' onClick={handleFeedbackClick} >
-                  Click Here
+                  Review Complete
                 </button>
               </td>
-              <td>{appointment.reviewGiven || ''}</td>
+              <td>{'Review Submitted!'}</td>
             </tr>
           ))}
         </tbody>
