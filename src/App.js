@@ -18,12 +18,14 @@ import FindDoctorSearch from './Components/FindDoctorSearch/FindDoctorSearch';
 import FindDoctorSearchIC from './Components/InstantConsultationBooking/FindDoctorSearchIC/FindDoctorSearchIC';
 // Import Find DoctorCard page
 import DoctorCardIC from './Components/InstantConsultationBooking/DoctorCardIC/DoctorCardIC';
-// Import Find DoctorCard page
+// Import Appointment FormIC page
 import AppointmentformIC from './Components/InstantConsultationBooking/AppointmentFormIC/AppointmentFormIC';
 // Import Find DoctorCard page
 import DoctorCard from './Components/DoctorCard/DoctorCard';
 //Import Doctor List
 import DoctorList from './Components/DoctorCard/DoctorsList';
+// Import Appointment Form page
+import Appointmentform from './Components/AppointmentForm/AppointmentForm.js';
 
 
 
@@ -49,6 +51,7 @@ function App() {
             <Route path="/DoctorCardIC" element={<DoctorCardIC/>}/>
             <Route path="/AppointmentFormIC" element={<AppointmentformIC/>}/>
             <Route path="/DoctorCard" element={<DoctorCard/>}/>
+            <Route path="/search/doctors" element={<Appointmentform/>}/>
         
           </Routes>
         </BrowserRouter>
