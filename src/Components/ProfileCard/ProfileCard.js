@@ -3,8 +3,9 @@
 import React, { useEffect, useState } from "react";
 import { API_URL } from "../../config";
 import { useNavigate } from "react-router-dom";
+import "./ProfileCard.css";
 // Define a Function component called ProfileForm
-const ProfileForm = () => {
+const ProfileCard = () => {
   // Set up state variables using the useState hook
   const [userDetails, setUserDetails] = useState({});
   const [updatedDetails, setUpdatedDetails] = useState({});
@@ -103,7 +104,7 @@ const ProfileForm = () => {
   return (
     <div className="profile-container">
       {editMode ? (
-        <form onSubmit={handleSubmit}>
+        <form className="signup-form" onSubmit={handleSubmit}>
           <label>
             Email
             <input
@@ -113,6 +114,24 @@ const ProfileForm = () => {
               disabled // Disable the email field
             />
           </label>
+          <label>
+            Name
+            <input
+              type="name"
+              name="name"
+              value={userDetails.name}
+              disabled // Disable the name field
+            />
+          </label>
+          <label>
+            Phone
+            <input
+              type="phone"
+              name="phone"
+              value={userDetails.phone}
+              disabled // Disable the phone field
+            />
+          </label>
           {/* Create similar logic for displaying and editing name and phone from userDetails */}
           <button type="submit">Save</button>
         </form>
@@ -120,6 +139,8 @@ const ProfileForm = () => {
         <div className="profile-details">
           <h1>Welcome, {userDetails.name}</h1>
           {/* Implement code to display and allow editing of phone and email similar to above */}
+            <p><b>Email:</b> {userDetails.email}</p>
+            <p><b>Phone:</b> {userDetails.phone}</p>
           <button onClick={handleEdit}>Edit</button>
         </div>
       )}
@@ -127,4 +148,4 @@ const ProfileForm = () => {
   );
 };
 // Export the ProfileForm component as the default export
-export default ProfileForm;
+export default ProfileCard;

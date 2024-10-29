@@ -31,6 +31,7 @@ import ReviewForm from './Components/ReviewForm/ReviewForm.js';
 // Import Feedback Form page
 import FeedbackForm from './Components/ReviewForm/FeedbackForm.js';
 // Import Profile Update page
+import ProfileCard from './Components/ProfileCard/ProfileCard.js'
 
 
 
@@ -61,6 +62,7 @@ function App() {
             <Route path="/search/doctors" element={<Appointmentform/>}/>
             <Route path="/reviews" element={<ReviewForm/>}/>
             <Route path="/feedback-form" element={<FeedbackForm/>}/>
+            <Route path="/profile-update" element={<ProfileCard/>}/>
             
           </Routes>
         </BrowserRouter>
