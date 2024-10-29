@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import { API_URL } from "../../config";
 import { useNavigate } from "react-router-dom";
-
 // Define a Function component called ProfileForm
 const ProfileForm = () => {
   // Set up state variables using the useState hook
@@ -114,31 +113,13 @@ const ProfileForm = () => {
               disabled // Disable the email field
             />
           </label>
-          <label>
-         Name
-         <input
-           type="text"
-           name="name"
-           value={updatedDetails.name}
-           onChange={handleInputChange}
-         />
-       </label>
-       <label>
-         Phone
-         <input
-           type="text"
-           name="phone"
-           value={updatedDetails.phone}
-           onChange={handleInputChange}
-         />
-       </label>
+          {/* Create similar logic for displaying and editing name and phone from userDetails */}
           <button type="submit">Save</button>
         </form>
       ) : (
         <div className="profile-details">
           <h1>Welcome, {userDetails.name}</h1>
-          <p> <b>Email:</b> {userDetails.email}</p>
-        <p><b>Phone:</b> {userDetails.phone}</p>
+          {/* Implement code to display and allow editing of phone and email similar to above */}
           <button onClick={handleEdit}>Edit</button>
         </div>
       )}

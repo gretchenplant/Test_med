@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 import "./Navbar.css";
+import  ProfileCard from './src/ProfileCard';
+
 
 
 const Navbar = () => {
@@ -45,7 +47,7 @@ const Navbar = () => {
 
   const profileEdit = () => {
 
-    navigate('/profile-update'); // Navigate to FeedbackForm component
+    navigate("/profile-update"); // Navigate to FeedbackForm component
   };
     useEffect(() => { 
       const storedemail = sessionStorage.getItem("email");
@@ -89,7 +91,7 @@ const Navbar = () => {
                         </button>
                         {showDropdown && (
                             <div className="dropdown-content">
-                                <button onClick={} href="#option1">Profile</button>
+                                <button onClick={profileEdit} href="#option1">Profile</button>
                                 <div href="#option2">Reports</div>
                             </div>
                         )}
