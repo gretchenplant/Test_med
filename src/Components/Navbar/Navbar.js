@@ -49,6 +49,10 @@ const Navbar = () => {
 
     navigate("/profile-update"); // Navigate to FeedbackForm component
   };
+  const reportsPage = () => {
+
+    navigate("/reports"); // Navigate to FeedbackForm component
+  };
     useEffect(() => { 
       const storedemail = sessionStorage.getItem("email");
 
@@ -92,7 +96,7 @@ const Navbar = () => {
                         {showDropdown && (
                             <div className="dropdown-content">
                                 <button onClick={profileEdit} href="#option1">Profile</button>
-                                <div href="#option2">Reports</div>
+                                <button onClick={reportsPage} href="#option2">Reports</button>
                             </div>
                         )}
                     </li>
