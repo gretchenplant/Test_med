@@ -11,16 +11,19 @@ const Reports = () => {
   ]);
 
   // Function to handle feedback button click
-  const navigate = useNavigate();
-
-  const handleFeedbackClick = () => {
-
-    navigate('/feedback-form'); // Navigate to FeedbackForm component
-  };
+  const DownloadPDF = () => {
+    
+      const link = document.createElement('a');
+      link.href = './patient_report.pdf'; // Adjust the path to your PDF file
+      link.setAttribute('download', 'patient_report.pdf'); // The name the file will have when downloaded
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+};
 
   return (
     <div>
-      <h1>Appointment Feedback</h1>
+      <h1>Patient Reports</h1>
       <table>
         <thead>
           <tr>
@@ -38,13 +41,14 @@ const Reports = () => {
               <td>{appointment.doctorName}</td>
               <td>{appointment.specialty}</td>
               <td>
-                <button className='btnColor' onClick={handleFeedbackClick} >
+                <button className='btnColor' onClick={DownloadPDF} >
                   View Report
                 </button>
               </td>
-              <td><button className='btnColor' onClick={handleFeedbackClick} >
-                  Download Report
-                </button></td>
+              <td><div>
+      
+      <button className='btnColor' onClick={DownloadPDF}>Download PDF</button>
+    </div></td>
             </tr>
           ))}
         </tbody>
