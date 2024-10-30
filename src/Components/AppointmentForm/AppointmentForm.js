@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './AppointmentForm.css';
 import HourDropdown from './DropdownMenu.js';
+import { useNavigate } from "react-router-dom";
 
 const AppointmentForm = ({ doctorName, doctorSpeciality, onSubmit }) => {
     const [name, setName] = useState('');
@@ -8,6 +9,11 @@ const AppointmentForm = ({ doctorName, doctorSpeciality, onSubmit }) => {
     const [selectedSlot, setSelectedSlot] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
     const [date, setDate] = useState('');
+    const navigate = useNavigate();
+    const alertSuccess = () => {
+        alert(`Appointment Booked!`);
+        navigate("/");
+    };
     const handleFormSubmit = (e) => {
       e.preventDefault();
       onSubmit({ name, phoneNumber});
@@ -33,14 +39,14 @@ const AppointmentForm = ({ doctorName, doctorSpeciality, onSubmit }) => {
             id="date"
             value={date}
             onChange={(e) => date(e.target.value)}
-            required
+            
           />
         </div>
         <div>
       <h1>Select an Hour</h1>
       <HourDropdown />
     </div>
-        <button type="submit">Book Now</button>
+        <button onClick={alertSuccess} type="submit">Book Now</button>
       </form>
     );
   };
